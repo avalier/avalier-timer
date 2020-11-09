@@ -1,0 +1,29 @@
+﻿<Window x:Class="Avalier.Timer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Avalier.Timer"
+        mc:Ignorable="d"
+        Title="Avalier Timer"  
+        WindowStyle="None" 
+        Margin="0,0,0,0" 
+        Padding="0,0,0,0" 
+        AllowsTransparency="true"
+        ResizeMode="CanResizeWithGrip"
+        Height="60" 
+        Width="240">
+    <Window.Resources>
+        <Style x:Key="NoMarginGrid" TargetType="{x:Type Grid}">
+            <Setter Property="Margin" Value="0"/>
+        </Style>
+    </Window.Resources>
+    <Window.Background>
+        <SolidColorBrush Opacity="0.5" Color="Black"/>
+    </Window.Background>
+    <Grid Style="{StaticResource NoMarginGrid}">
+        <Viewbox>
+            <TextBlock Name="TextBlock" Foreground="White">00:00:00</TextBlock>
+        </Viewbox>
+    </Grid>
+</Window>
